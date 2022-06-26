@@ -68,7 +68,7 @@ class WOFComputerPlayer(WOFPlayer):
             return random.choice(lst)
 
 import sys
-sys.setExecutionLimit(600000) # let this take up to 10 minutes
+# sys.setExecutionLimit(600000) # let this take up to 10 minutes
 
 import json
 import random
