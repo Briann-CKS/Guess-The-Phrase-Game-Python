@@ -1,0 +1,11 @@
+{
+    "spin": [{"type": "cash", "text": "$950", "value": 950, "prize": "A trip to Ann Arbor!"},
+    {"type": "bankrupt", "text": "Bankrupt", "prize": false },
+    {"type": "loseturn", "text": "Lose a turn", "prize": false},
+    {"type": "cash", "text": "$500", "value": 500, "prize": "A trip to London!"},
+    {"type": "cash", "text": "$1200", "value": 1200, "prize": "A trip to Los Angeles!"},
+    {"type": "cash", "text": "$800", "value": 800, "prize": "A ticket to Justin Bieber's concert!"}, 
+    {"type": "cash", "text": "$600", "value": 600, "prize": "A trip to Canada!"},
+    {"type": "cash", "text": "$300", "value": 300, "prize": "A full ride to Harvard University!"},
+    {"type": "cash", "text": "$400", "value": 400, "prize": "A Star Wards limited edition lego set!"}]
+}
