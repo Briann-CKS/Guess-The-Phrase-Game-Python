@@ -106,7 +106,7 @@ def getNumberBetween(prompt, min, max):
 def spinWheel():
     with open("wheel.json", 'r') as f:
         wheel = json.loads(f.read())
-        return random.choice(wheel)
+        return random.choice(wheel["spin"])
 
 # Returns a category & phrase (as a tuple) to guess
 # Example:
@@ -146,19 +146,19 @@ print('WHEEL OF PYTHON')
 print('='*15)
 print('')
 
-num_human = getNumberBetween('How many human players?', 0, 10)
+num_human = getNumberBetween('How many human players? ', 0, 10)
 
 # Create the human player instances
-human_players = [WOFHumanPlayer(input('Enter the name for human player #{}'.format(i+1))) for i in range(num_human)]
+human_players = [WOFHumanPlayer(input('Enter the name for human player #{} '.format(i+1))) for i in range(num_human)]
 
-num_computer = getNumberBetween('How many computer players?', 0, 10)
+num_computer = getNumberBetween('How many computer players? ', 0, 10)
 
 # If there are computer players, ask how difficult they should be
 if num_computer >= 1:
-    difficulty = getNumberBetween('What difficulty for the computers? (1-10)', 1, 10)
+    difficulty = getNumberBetween('What difficulty for the computers? (1-10) ', 1, 10)
 
 # Create the computer player instances
-computer_players = [WOFComputerPlayer('Computer {}'.format(i+1), difficulty) for i in range(num_computer)]
+computer_players = [WOFComputerPlayer('Computer {} '.format(i+1), difficulty) for i in range(num_computer)]
 
 players = human_players + computer_players
 
@@ -281,4 +281,3 @@ if winner:
             print('    - {}'.format(prize))
 else:
     print('Nobody won. The phrase was {}'.format(phrase))
-
